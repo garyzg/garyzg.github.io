@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="Spark程序会经常访问一些不属于RDD的数据。例如下面的例子，在map()操作中用到了一张查找表： val lookup = Map(1-&amp;gt;”a”,2-&amp;gt;”b”,3-&amp;gt;”c”,4-&amp;gt;”d”,5-&amp;gt;”e”) val result = sc.parallelize(Array(2,1,3)).map(lookup(_)) 虽然这段程序运行正常，lookup作为闭包函数的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://www.garyzhang.xyz/2018/11/08/hello-world/index.html">
+<meta property="og:title" content="spark">
+<meta property="og:url" content="http://www.garyzhang.xyz/2018/11/08/spark/index.html">
 <meta property="og:site_name" content="garyzhang&#39;s blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Spark程序会经常访问一些不属于RDD的数据。例如下面的例子，在map()操作中用到了一张查找表： val lookup = Map(1-&amp;gt;”a”,2-&amp;gt;”b”,3-&amp;gt;”c”,4-&amp;gt;”d”,5-&amp;gt;”e”) val result = sc.parallelize(Array(2,1,3)).map(lookup(_)) 虽然这段程序运行正常，lookup作为闭包函数的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-08T00:43:04.553Z">
+<meta property="og:updated_time" content="2018-11-08T03:11:39.424Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="spark">
+<meta name="twitter:description" content="Spark程序会经常访问一些不属于RDD的数据。例如下面的例子，在map()操作中用到了一张查找表： val lookup = Map(1-&amp;gt;”a”,2-&amp;gt;”b”,3-&amp;gt;”c”,4-&amp;gt;”d”,5-&amp;gt;”e”) val result = sc.parallelize(Array(2,1,3)).map(lookup(_)) 虽然这段程序运行正常，lookup作为闭包函数的">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Hello World | garyzhang&#39;s blog</title>
+<title>spark | garyzhang&#39;s blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -257,11 +257,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-spark" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/11/08/hello-world/" class="article-date">
-      <time datetime="2018-11-08T00:43:04.553Z" itemprop="datePublished">2018-11-08</time>
+      <a href="/2018/11/08/spark/" class="article-date">
+      <time datetime="2018-11-08T03:10:07.000Z" itemprop="datePublished">2018-11-08</time>
 </a>
 
 
@@ -276,7 +276,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      spark
     </h1>
   
 
@@ -293,15 +293,88 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>Spark程序会经常访问一些不属于RDD的数据。例如下面的例子，在map()操作中用到了一张查找表：</p>
+<p>val lookup = Map(1-&gt;”a”,2-&gt;”b”,3-&gt;”c”,4-&gt;”d”,5-&gt;”e”)</p>
+<p>val result = sc.parallelize(Array(2,1,3)).map(lookup(_))</p>
+<p>虽然这段程序运行正常，lookup作为闭包函数的一部分被序列化后作为参数传递个map()，但是使用广播变量将更有效。</p>
+<p>1、广播变量（broadcast variable）</p>
+<p>广播变量在经过系列化后被发送个各个executor，然后缓存在那里，以便后期任务可以在需要它的时候访问它。它与常规变量不同，常规变量时作为闭包函数的一部分被序列化的，因此它们在每个任务中都要经过网络被传输一次。广播变量的作用类似mapreduce中的分布式缓存，只是spark将数据保存在内存中，当内存满了在写到磁盘。注意：要被广播的变量不能是RDD，可以调用collect()之后再广播。</p>
+<p>可以通过SparkContext.broadcast()方法传递即将被广播的变量来创建一个广播变量。它返回的是一个BroadCast[T],对类型T的变量的封装：</p>
+<p>def broadcast<a href="value: T" target="_blank" rel="noopener">T: ClassTag</a>: Broadcast[T]</p>
+<p>以上的例子可以这样：</p>
+<p>val lookup:BroadCast[Map[Int,String]] = sc.broadcast(Map(1-&gt;”a”,2-&gt;”b”,3-&gt;”c”,4-&gt;”d”,5-&gt;”e”))</p>
+<p>val result = sc.parallelize(Array(2,1,3)).map(lookup.value(_))</p>
+<p>注意：如果想要访问广播变量，需要用value获取。</p>
+<p>广播变量是单向传播的，即从driver到任务，因此一个广播变量是没有办法更新的，也不可能更新传回到drive端。此时，累加器就可以上场了。</p>
+<p>2、累加器(Accumulator)</p>
+<p>先看下这个程序：求累加和</p>
+<p>​    val numbers: RDD[Int] = sc.parallelize(Array(1,2,3,4,5,6,7,8,9),3)</p>
+<p>/*    var sumed = 0  //foreach不能实现，它在Executor端运行，不能返回到driver端</p>
+<p>​    numbers.foreach(x=&gt;{</p>
+<p>​      sumed += x</p>
+<p>​    })*/</p>
+<p>结果等于0。foreach不能实现，它在Executor端运行，不能返回到driver端。</p>
+<p>累加器是在任务中只能对它做加法的共享变量。类似mapreduce中的计数器。当作业完成后，Driver端可以检索到累加器的最终值。Executor端只能做加，在这里不能得到值。</p>
+<p>例子：</p>
+<p>import org.apache.spark.rdd.RDD</p>
+<p>import org.apache.spark.{Accumulator, SparkConf, SparkContext}</p>
+<p>object AccumulatorTest {</p>
+<p>  def main(args: Array[String]): Unit = {</p>
+<p>​    val conf = new SparkConf().setAppName(“CustomSort”).setMaster(“local[2]”)</p>
+<p>​    val sc = new SparkContext(conf)</p>
+<p>​    val numbers: RDD[Int] = sc.parallelize(Array(1,2,3,4,5,6,7,8,9),3)</p>
+<p>/*    var sumed = 0  //foreach不能实现，它在Executor端运行，不能返回到driver端</p>
+<p>​    numbers.foreach(x=&gt;{</p>
+<p>​      sumed += x</p>
+<p>​    })*/</p>
+<p>​    //spark 提供了Accumulator（累加器），用于多节点对一个变量分布式计算的操作，而且只能</p>
+<p>​    //进行累加的操作（数值：往上累加；字符串：拼接）。其实就是提供了多个task并行操作的过程，</p>
+<p>​    //task 只能做累加操作，不能读取其值，如果想读取其值，只有Driver端才可以。</p>
+<p>​    val sum: Accumulator[Int] = sc.accumulator(0)</p>
+<p>​    numbers.foreach(num =&gt; sum += num) //累加计算</p>
+<p>​    println(sum.value) //可以通过调用value来获取值</p>
+<p>  }</p>
+<p>}</p>
+<p>这里的累加器对Int类型，其实它可以对任意类型。</p>
+<p>sparkContext中还提供以下方法：</p>
+<p>累积可变集合中的值：</p>
+<p>def accumulableCollection[R &lt;% Growable[T] with TraversableOnce[T] with Serializable: ClassTag, T] (initialValue: R): Accumulable[R, T]</p>
+<p>比如：</p>
+<p>case class Employee(id:String, name:String, dept:String)</p>
+<p>val empAccu = sc.accumulableCollection(mutable.HashMap<a href="">String,Employee</a>)</p>
+<p>val employees = List(</p>
+<p>  Employee(“10001”, “Tom”, “Eng”),</p>
+<p>  Employee(“10002”, “Roger”, “Sales”),</p>
+<p>  Employee(“10003”, “Rafael”, “Sales”),</p>
+<p>  Employee(“10004”, “David”, “Sales”),</p>
+<p>  Employee(“10005”, “Moore”, “Sales”),</p>
+<p>  Employee(“10006”, “Dawn”, “Sales”),</p>
+<p>  Employee(“10007”, “Stud”, “Marketing”),</p>
+<p>  Employee(“10008”, “Brown”, “QA”)</p>
+<p>)</p>
+<p>System.out.println(“employee count “ + employees.size)</p>
+<p>sc.parallelize(employees).foreach(e =&gt; {</p>
+<p>  // notice this is different from the previous solution</p>
+<p>  empAccu += e.id -&gt; e</p>
+<p>})</p>
+<p>println(“empAccumulator size “ + empAccu.value.size)</p>
+<p>empAccu.value.foreach(entry =&gt;</p>
+<p>  println(“emp id = “ + entry._1 + “ name = “ + entry._2.name))</p>
+<p>以上需要放到main（）中。</p>
+<p>运行结果：</p>
+<p>employee count 8</p>
+<p>empAccumulator size 8</p>
+<p>emp id = 10007 name = Stud</p>
+<p>emp id = 10001 name = Tom</p>
+<p>emp id = 10004 name = David</p>
+<p>emp id = 10006 name = Dawn</p>
+<p>emp id = 10003 name = Rafael</p>
+<p>emp id = 10002 name = Roger</p>
+<p>emp id = 10005 name = Moore</p>
+<p>emp id = 10008 name = Brown</p>
+<p>还支持输出结果类型和输入的类型不一样的：</p>
+<p>def accumulable<a href="initialValue: R" target="_blank" rel="noopener">R, T</a>(implicit param: AccumulableParam[R, T])</p>
+<p>  : Accumulable[R, T]</p>
 
       
     </div>
@@ -310,13 +383,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/11/08/hello-world/">Hello World</a></p>
+        <p><span>本文标题:</span><a href="/2018/11/08/spark/">spark</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">garyzhang</a></p>
-        <p><span>发布时间:</span>2018-11-08, 08:43:04</p>
-        <p><span>最后更新:</span>2018-11-08, 08:43:04</p>
+        <p><span>发布时间:</span>2018-11-08, 11:10:07</p>
+        <p><span>最后更新:</span>2018-11-08, 11:11:39</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/11/08/hello-world/" title="Hello World">http://www.garyzhang.xyz/2018/11/08/hello-world/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://www.garyzhang.xyz/2018/11/08/hello-world/　　作者: garyzhang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/11/08/spark/" title="spark">http://www.garyzhang.xyz/2018/11/08/spark/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.garyzhang.xyz/2018/11/08/spark/　　作者: garyzhang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -328,12 +401,12 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
+        
+            <div id="article-nav-older" class="article-nav-title">
                 <a href="/2018/11/08/test-my/">
                     test_my
                 </a>
             </div>
-        
         
     </nav>
 
@@ -343,7 +416,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+            
         
     </div>
     <style>
@@ -379,7 +452,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Hello World　| garyzhang's blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"spark　| garyzhang's blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -399,15 +472,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/11/08/test-my/" title="上一篇: test_my">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2018/11/08/test-my/" title="下一篇: test_my">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 
